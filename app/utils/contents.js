@@ -2,6 +2,8 @@ let Contents = window.Contents
   // for `commonStrict` module formatter
   // https://babeljs.io/docs/usage/modules/#interop
   .map((Content) => Content.default || Content)
+  // Filter out any contents that don't have a styleguide defined.
+  .filter((Content) => Content.styleguide)
   // compare index numbers
   .sort((a, b) => {
     a = a.styleguide.index
