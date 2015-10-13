@@ -57,6 +57,7 @@ export default class extends React.Component {
 - `description`: Components description (optional)
 - `code`: Code example (optional). Not specifying this will not auto-generate an example.
 - `className`: CSS class name (optional)
+- `useOnlyProvidedExamples`: Setting this to true will prevent rendering with the provided render and just use the examples provided in the examples prop (optional)
 
 #### Additional examples in tabs (optional) [Demo](http://pocotan001.github.io/react-styleguide-generator/#!/Features!/Additional%20examples%20in%20tabs)
 
@@ -162,7 +163,7 @@ Options:
 
 Examples:
   rsg 'example/**/*.js' -t 'Great Style Guide' -f 'a.css, a.js' -v
-  
+
   # Necessary to use a config file if you want to enable react-docgen
   rsg 'example/**/*.js' -c 'styleguide.json' -v
 ```
