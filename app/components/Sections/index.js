@@ -38,7 +38,7 @@ export default class Sections extends Component {
 
           return (
             <Section {...Content.styleguide} key={i}>
-              {Content.prototype.render && <Content {...this.props} />}
+              {Content.prototype.render && !Content.styleguide.useOnlyProvidedExamples && <Content {...this.props} />}
             </Section>
           )
         })}
